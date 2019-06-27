@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		932723F622C4CB0700CEBAD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 932723F522C4CB0700CEBAD4 /* AppDelegate.m */; };
+		932723F922C4CB0700CEBAD4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932723F822C4CB0700CEBAD4 /* ViewController.m */; };
+		932723FC22C4CB0700CEBAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 932723FA22C4CB0700CEBAD4 /* Main.storyboard */; };
+		932723FE22C4CB0800CEBAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932723FD22C4CB0800CEBAD4 /* Assets.xcassets */; };
+		9327240122C4CB0800CEBAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 932723FF22C4CB0800CEBAD4 /* LaunchScreen.storyboard */; };
+		9327240422C4CB0800CEBAD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327240322C4CB0800CEBAD4 /* main.m */; };
+		9327242622C4CB3000CEBAD4 /* UIView+LDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327240C22C4CB2F00CEBAD4 /* UIView+LDCategory.m */; };
+		9327242722C4CB3000CEBAD4 /* NSObject+LDCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327241022C4CB2F00CEBAD4 /* NSObject+LDCopying.m */; };
+		9327242822C4CB3000CEBAD4 /* NSObject+LDOptionalSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327241422C4CB2F00CEBAD4 /* NSObject+LDOptionalSingleton.m */; };
+		9327242922C4CB3000CEBAD4 /* LD_NSStringEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327241722C4CB3000CEBAD4 /* LD_NSStringEditor.m */; };
+		9327242A22C4CB3000CEBAD4 /* NSObject+LDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327241D22C4CB3000CEBAD4 /* NSObject+LDCategory.m */; };
+		9327242B22C4CB3000CEBAD4 /* LDExchangeAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327241E22C4CB3000CEBAD4 /* LDExchangeAlgorithm.m */; };
+		9327242C22C4CB3000CEBAD4 /* LDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327241F22C4CB3000CEBAD4 /* LDExtension.m */; };
+		9327242D22C4CB3000CEBAD4 /* UIView+frameAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327242022C4CB3000CEBAD4 /* UIView+frameAddition.m */; };
+		9327242E22C4CB3000CEBAD4 /* UIImage+LDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327242222C4CB3000CEBAD4 /* UIImage+LDCategory.m */; };
+		9327242F22C4CB3000CEBAD4 /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327242322C4CB3000CEBAD4 /* UIButton+EnlargeTouchArea.m */; };
+		9327243022C4CB3000CEBAD4 /* LDDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327242422C4CB3000CEBAD4 /* LDDeviceModel.m */; };
+		9327243122C4CB3000CEBAD4 /* LDEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327242522C4CB3000CEBAD4 /* LDEncrypt.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		932723F122C4CB0700CEBAD4 /* LDExtension-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LDExtension-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		932723F422C4CB0700CEBAD4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		932723F522C4CB0700CEBAD4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		932723F722C4CB0700CEBAD4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		932723F822C4CB0700CEBAD4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		932723FB22C4CB0700CEBAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		932723FD22C4CB0800CEBAD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9327240022C4CB0800CEBAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9327240222C4CB0800CEBAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9327240322C4CB0800CEBAD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9327240B22C4CB2F00CEBAD4 /* NSObject+LDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LDCategory.h"; sourceTree = "<group>"; };
+		9327240C22C4CB2F00CEBAD4 /* UIView+LDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LDCategory.m"; sourceTree = "<group>"; };
+		9327240D22C4CB2F00CEBAD4 /* UIView+frameAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frameAddition.h"; sourceTree = "<group>"; };
+		9327240F22C4CB2F00CEBAD4 /* NSObject+LDCopying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LDCopying.h"; sourceTree = "<group>"; };
+		9327241022C4CB2F00CEBAD4 /* NSObject+LDCopying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LDCopying.m"; sourceTree = "<group>"; };
+		9327241122C4CB2F00CEBAD4 /* LDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDExtension.h; sourceTree = "<group>"; };
+		9327241222C4CB2F00CEBAD4 /* LDExchangeAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDExchangeAlgorithm.h; sourceTree = "<group>"; };
+		9327241422C4CB2F00CEBAD4 /* NSObject+LDOptionalSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LDOptionalSingleton.m"; sourceTree = "<group>"; };
+		9327241522C4CB2F00CEBAD4 /* NSObject+LDOptionalSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LDOptionalSingleton.h"; sourceTree = "<group>"; };
+		9327241622C4CB2F00CEBAD4 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
+		9327241722C4CB3000CEBAD4 /* LD_NSStringEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LD_NSStringEditor.m; sourceTree = "<group>"; };
+		9327241822C4CB3000CEBAD4 /* UIImage+LDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LDCategory.h"; sourceTree = "<group>"; };
+		9327241922C4CB3000CEBAD4 /* LDEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDEncrypt.h; sourceTree = "<group>"; };
+		9327241A22C4CB3000CEBAD4 /* LDDeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDDeviceModel.h; sourceTree = "<group>"; };
+		9327241B22C4CB3000CEBAD4 /* LD_Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LD_Macros.h; sourceTree = "<group>"; };
+		9327241C22C4CB3000CEBAD4 /* UIView+LDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LDCategory.h"; sourceTree = "<group>"; };
+		9327241D22C4CB3000CEBAD4 /* NSObject+LDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LDCategory.m"; sourceTree = "<group>"; };
+		9327241E22C4CB3000CEBAD4 /* LDExchangeAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDExchangeAlgorithm.m; sourceTree = "<group>"; };
+		9327241F22C4CB3000CEBAD4 /* LDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDExtension.m; sourceTree = "<group>"; };
+		9327242022C4CB3000CEBAD4 /* UIView+frameAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frameAddition.m"; sourceTree = "<group>"; };
+		9327242122C4CB3000CEBAD4 /* LD_NSStringEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LD_NSStringEditor.h; sourceTree = "<group>"; };
+		9327242222C4CB3000CEBAD4 /* UIImage+LDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LDCategory.m"; sourceTree = "<group>"; };
+		9327242322C4CB3000CEBAD4 /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeTouchArea.m"; sourceTree = "<group>"; };
+		9327242422C4CB3000CEBAD4 /* LDDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDDeviceModel.m; sourceTree = "<group>"; };
+		9327242522C4CB3000CEBAD4 /* LDEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDEncrypt.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		932723EE22C4CB0700CEBAD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		932723E822C4CB0700CEBAD4 = {
+			isa = PBXGroup;
+			children = (
+				932723F322C4CB0700CEBAD4 /* LDExtension-master */,
+				932723F222C4CB0700CEBAD4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		932723F222C4CB0700CEBAD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				932723F122C4CB0700CEBAD4 /* LDExtension-master.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		932723F322C4CB0700CEBAD4 /* LDExtension-master */ = {
+			isa = PBXGroup;
+			children = (
+				9327240A22C4CB2F00CEBAD4 /* LDExtension */,
+				932723F422C4CB0700CEBAD4 /* AppDelegate.h */,
+				932723F522C4CB0700CEBAD4 /* AppDelegate.m */,
+				932723F722C4CB0700CEBAD4 /* ViewController.h */,
+				932723F822C4CB0700CEBAD4 /* ViewController.m */,
+				932723FA22C4CB0700CEBAD4 /* Main.storyboard */,
+				932723FD22C4CB0800CEBAD4 /* Assets.xcassets */,
+				932723FF22C4CB0800CEBAD4 /* LaunchScreen.storyboard */,
+				9327240222C4CB0800CEBAD4 /* Info.plist */,
+				9327240322C4CB0800CEBAD4 /* main.m */,
+			);
+			path = "LDExtension-master";
+			sourceTree = "<group>";
+		};
+		9327240A22C4CB2F00CEBAD4 /* LDExtension */ = {
+			isa = PBXGroup;
+			children = (
+				9327240B22C4CB2F00CEBAD4 /* NSObject+LDCategory.h */,
+				9327240C22C4CB2F00CEBAD4 /* UIView+LDCategory.m */,
+				9327240D22C4CB2F00CEBAD4 /* UIView+frameAddition.h */,
+				9327240E22C4CB2F00CEBAD4 /* NSObject+LDCopying */,
+				9327241122C4CB2F00CEBAD4 /* LDExtension.h */,
+				9327241222C4CB2F00CEBAD4 /* LDExchangeAlgorithm.h */,
+				9327241322C4CB2F00CEBAD4 /* NSObject+LDOptionalSingleton */,
+				9327241622C4CB2F00CEBAD4 /* UIButton+EnlargeTouchArea.h */,
+				9327241722C4CB3000CEBAD4 /* LD_NSStringEditor.m */,
+				9327241822C4CB3000CEBAD4 /* UIImage+LDCategory.h */,
+				9327241922C4CB3000CEBAD4 /* LDEncrypt.h */,
+				9327241A22C4CB3000CEBAD4 /* LDDeviceModel.h */,
+				9327241B22C4CB3000CEBAD4 /* LD_Macros.h */,
+				9327241C22C4CB3000CEBAD4 /* UIView+LDCategory.h */,
+				9327241D22C4CB3000CEBAD4 /* NSObject+LDCategory.m */,
+				9327241E22C4CB3000CEBAD4 /* LDExchangeAlgorithm.m */,
+				9327241F22C4CB3000CEBAD4 /* LDExtension.m */,
+				9327242022C4CB3000CEBAD4 /* UIView+frameAddition.m */,
+				9327242122C4CB3000CEBAD4 /* LD_NSStringEditor.h */,
+				9327242222C4CB3000CEBAD4 /* UIImage+LDCategory.m */,
+				9327242322C4CB3000CEBAD4 /* UIButton+EnlargeTouchArea.m */,
+				9327242422C4CB3000CEBAD4 /* LDDeviceModel.m */,
+				9327242522C4CB3000CEBAD4 /* LDEncrypt.m */,
+			);
+			name = LDExtension;
+			path = ../../LDExtension;
+			sourceTree = "<group>";
+		};
+		9327240E22C4CB2F00CEBAD4 /* NSObject+LDCopying */ = {
+			isa = PBXGroup;
+			children = (
+				9327240F22C4CB2F00CEBAD4 /* NSObject+LDCopying.h */,
+				9327241022C4CB2F00CEBAD4 /* NSObject+LDCopying.m */,
+			);
+			path = "NSObject+LDCopying";
+			sourceTree = "<group>";
+		};
+		9327241322C4CB2F00CEBAD4 /* NSObject+LDOptionalSingleton */ = {
+			isa = PBXGroup;
+			children = (
+				9327241422C4CB2F00CEBAD4 /* NSObject+LDOptionalSingleton.m */,
+				9327241522C4CB2F00CEBAD4 /* NSObject+LDOptionalSingleton.h */,
+			);
+			path = "NSObject+LDOptionalSingleton";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		932723F022C4CB0700CEBAD4 /* LDExtension-master */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9327240722C4CB0800CEBAD4 /* Build configuration list for PBXNativeTarget "LDExtension-master" */;
+			buildPhases = (
+				932723ED22C4CB0700CEBAD4 /* Sources */,
+				932723EE22C4CB0700CEBAD4 /* Frameworks */,
+				932723EF22C4CB0700CEBAD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LDExtension-master";
+			productName = "LDExtension-master";
+			productReference = 932723F122C4CB0700CEBAD4 /* LDExtension-master.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		932723E922C4CB0700CEBAD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Alex;
+				TargetAttributes = {
+					932723F022C4CB0700CEBAD4 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 932723EC22C4CB0700CEBAD4 /* Build configuration list for PBXProject "LDExtension-master" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 932723E822C4CB0700CEBAD4;
+			productRefGroup = 932723F222C4CB0700CEBAD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				932723F022C4CB0700CEBAD4 /* LDExtension-master */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		932723EF22C4CB0700CEBAD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9327240122C4CB0800CEBAD4 /* LaunchScreen.storyboard in Resources */,
+				932723FE22C4CB0800CEBAD4 /* Assets.xcassets in Resources */,
+				932723FC22C4CB0700CEBAD4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		932723ED22C4CB0700CEBAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9327242722C4CB3000CEBAD4 /* NSObject+LDCopying.m in Sources */,
+				9327242C22C4CB3000CEBAD4 /* LDExtension.m in Sources */,
+				9327242D22C4CB3000CEBAD4 /* UIView+frameAddition.m in Sources */,
+				9327243122C4CB3000CEBAD4 /* LDEncrypt.m in Sources */,
+				9327242A22C4CB3000CEBAD4 /* NSObject+LDCategory.m in Sources */,
+				9327242622C4CB3000CEBAD4 /* UIView+LDCategory.m in Sources */,
+				9327243022C4CB3000CEBAD4 /* LDDeviceModel.m in Sources */,
+				932723F922C4CB0700CEBAD4 /* ViewController.m in Sources */,
+				9327242922C4CB3000CEBAD4 /* LD_NSStringEditor.m in Sources */,
+				9327242822C4CB3000CEBAD4 /* NSObject+LDOptionalSingleton.m in Sources */,
+				9327240422C4CB0800CEBAD4 /* main.m in Sources */,
+				9327242E22C4CB3000CEBAD4 /* UIImage+LDCategory.m in Sources */,
+				9327242B22C4CB3000CEBAD4 /* LDExchangeAlgorithm.m in Sources */,
+				9327242F22C4CB3000CEBAD4 /* UIButton+EnlargeTouchArea.m in Sources */,
+				932723F622C4CB0700CEBAD4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		932723FA22C4CB0700CEBAD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				932723FB22C4CB0700CEBAD4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		932723FF22C4CB0800CEBAD4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9327240022C4CB0800CEBAD4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9327240522C4CB0800CEBAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9327240622C4CB0800CEBAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9327240822C4CB0800CEBAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHX5GA8RPT;
+				INFOPLIST_FILE = "LDExtension-master/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Li.LDExtension-master";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9327240922C4CB0800CEBAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHX5GA8RPT;
+				INFOPLIST_FILE = "LDExtension-master/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Li.LDExtension-master";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		932723EC22C4CB0700CEBAD4 /* Build configuration list for PBXProject "LDExtension-master" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9327240522C4CB0800CEBAD4 /* Debug */,
+				9327240622C4CB0800CEBAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9327240722C4CB0800CEBAD4 /* Build configuration list for PBXNativeTarget "LDExtension-master" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9327240822C4CB0800CEBAD4 /* Debug */,
+				9327240922C4CB0800CEBAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 932723E922C4CB0700CEBAD4 /* Project object */;
+}
