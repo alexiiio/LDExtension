@@ -123,11 +123,11 @@
 /**
  URLDEcode
  */
--(NSString *)decodeString;
+-(NSString *)urlDecodeString;
 /**
  URLEncode
  */
--(NSString *)encodeString;
+-(NSString *)urlEncodeString;
 
 /**
  字符串拼接。

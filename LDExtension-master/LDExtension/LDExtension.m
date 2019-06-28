@@ -7,6 +7,7 @@
 //
 
 #import "LDExtension.h"
+#import <CoreServices/CoreServices.h>
 
 @implementation LDExtension
 
