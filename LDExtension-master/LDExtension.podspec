@@ -1,16 +1,15 @@
 
 Pod::Spec.new do |s|
-s.name = 'LDExtension'
-s.version = '0.0.5'
-s.license = 'MIT'
-s.summary = 'A tools for develop iOS apps.'
-s.homepage = 'https://github.com/alexiiio/LDExtension'
-s.author = { 'AleXiiio' => '450145524@qq.com' }
-s.source = { :git => "https://github.com/alexiiio/LDExtension.git", :tag => "v0.0.5"}
-s.requires_arc = true
-s.ios.deployment_target = '7.0'
-s.source_files = "LDExtension/"
-#s.source_files = "LDExtension/**/*.{h,m}"
-s.frameworks = 'UIKit'
-s.frameworks = 'CoreServices'
+	s.name = 'LDExtension'
+    s.version = '0.0.7'
+	s.license      = { :type => "MIT", :file => "LICENSE" }
+	s.summary = 'A tools for develop iOS apps.'
+	s.homepage = 'https://github.com/alexiiio/LDExtension'
+	s.author = { 'AleXiiio' => '450145524@qq.com' }
+	s.source = { :git => "https://github.com/alexiiio/LDExtension.git", :tag => "v0.0.7"}
+	s.requires_arc = true
+	s.platform     = :ios, "7.0"
+	s.source_files = 'LDExtension-master/LDExtension/'
+	s.frameworks = 'UIKit'
+	s.frameworks = 'CoreServices'
 end
