@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 // c语言api获取 mimeType
 + (void)mimeTypeWithRequestPath:(NSString *)path completion:(void *(^_Nullable)(NSString *))block;
 /**
- 归档对象，记得引入NSObject+coding类目，可以归档自定义类型数据。保存到Document目录
+ 归档对象，记得引入NSObject+coding类目，或自行实现NSCoding协议方法，可以归档自定义类型数据。保存到Document目录
  @param object 待归档对象
  @param fileName 保存的文件名，要有唯一性
  */

@@ -14,7 +14,6 @@
 		9327240122C4CB0800CEBAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 932723FF22C4CB0800CEBAD4 /* LaunchScreen.storyboard */; };
 		9327240422C4CB0800CEBAD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327240322C4CB0800CEBAD4 /* main.m */; };
 		9327244E22C4CED800CEBAD4 /* UIView+LDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327243422C4CED800CEBAD4 /* UIView+LDCategory.m */; };
-		9327244F22C4CED800CEBAD4 /* NSObject+LDCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327243822C4CED800CEBAD4 /* NSObject+LDCopying.m */; };
 		9327245022C4CED800CEBAD4 /* NSObject+LDOptionalSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327243C22C4CED800CEBAD4 /* NSObject+LDOptionalSingleton.m */; };
 		9327245122C4CED800CEBAD4 /* LD_NSStringEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327243F22C4CED800CEBAD4 /* LD_NSStringEditor.m */; };
 		9327245222C4CED800CEBAD4 /* NSObject+LDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9327244522C4CED800CEBAD4 /* NSObject+LDCategory.m */; };
@@ -41,8 +40,6 @@
 		9327243322C4CED800CEBAD4 /* NSObject+LDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LDCategory.h"; sourceTree = "<group>"; };
 		9327243422C4CED800CEBAD4 /* UIView+LDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LDCategory.m"; sourceTree = "<group>"; };
 		9327243522C4CED800CEBAD4 /* UIView+frameAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frameAddition.h"; sourceTree = "<group>"; };
-		9327243722C4CED800CEBAD4 /* NSObject+LDCopying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LDCopying.h"; sourceTree = "<group>"; };
-		9327243822C4CED800CEBAD4 /* NSObject+LDCopying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LDCopying.m"; sourceTree = "<group>"; };
 		9327243922C4CED800CEBAD4 /* LDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDExtension.h; sourceTree = "<group>"; };
 		9327243A22C4CED800CEBAD4 /* LDExchangeAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDExchangeAlgorithm.h; sourceTree = "<group>"; };
 		9327243C22C4CED800CEBAD4 /* NSObject+LDOptionalSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LDOptionalSingleton.m"; sourceTree = "<group>"; };
@@ -125,7 +122,6 @@
 				9327244722C4CED800CEBAD4 /* LDExtension.m */,
 				9327243322C4CED800CEBAD4 /* NSObject+LDCategory.h */,
 				9327244522C4CED800CEBAD4 /* NSObject+LDCategory.m */,
-				9327243622C4CED800CEBAD4 /* NSObject+LDCopying */,
 				9327243B22C4CED800CEBAD4 /* NSObject+LDOptionalSingleton */,
 				9327243E22C4CED800CEBAD4 /* UIButton+EnlargeTouchArea.h */,
 				9327244B22C4CED800CEBAD4 /* UIButton+EnlargeTouchArea.m */,
@@ -139,20 +135,11 @@
 			path = LDExtension;
 			sourceTree = SOURCE_ROOT;
 		};
-		9327243622C4CED800CEBAD4 /* NSObject+LDCopying */ = {
-			isa = PBXGroup;
-			children = (
-				9327243722C4CED800CEBAD4 /* NSObject+LDCopying.h */,
-				9327243822C4CED800CEBAD4 /* NSObject+LDCopying.m */,
-			);
-			path = "NSObject+LDCopying";
-			sourceTree = "<group>";
-		};
 		9327243B22C4CED800CEBAD4 /* NSObject+LDOptionalSingleton */ = {
 			isa = PBXGroup;
 			children = (
-				9327243C22C4CED800CEBAD4 /* NSObject+LDOptionalSingleton.m */,
 				9327243D22C4CED800CEBAD4 /* NSObject+LDOptionalSingleton.h */,
+				9327243C22C4CED800CEBAD4 /* NSObject+LDOptionalSingleton.m */,
 			);
 			path = "NSObject+LDOptionalSingleton";
 			sourceTree = "<group>";
@@ -231,7 +218,6 @@
 				9327245122C4CED800CEBAD4 /* LD_NSStringEditor.m in Sources */,
 				9327245922C4CED800CEBAD4 /* LDEncrypt.m in Sources */,
 				9327245522C4CED800CEBAD4 /* UIView+frameAddition.m in Sources */,
-				9327244F22C4CED800CEBAD4 /* NSObject+LDCopying.m in Sources */,
 				9327245622C4CED800CEBAD4 /* UIImage+LDCategory.m in Sources */,
 				9327245422C4CED800CEBAD4 /* LDExtension.m in Sources */,
 				9327245722C4CED800CEBAD4 /* UIButton+EnlargeTouchArea.m in Sources */,
