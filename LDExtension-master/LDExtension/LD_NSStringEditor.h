@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 @interface LD_NSStringEditor : NSObject
 /**
-    计算某个字符串的rect，并返回rect的size
+ 计算某个字符串的rect，并返回rect的size
  @param aString 要计算的字符串
  @param limitSize 对该字符串的size限制条件
  @param fontSize 计算时使用的字体大小
@@ -18,11 +18,11 @@
  */
 +(CGSize)sizeOfStringWithString:(NSString *)aString limitSize:(CGSize)limitSize fontSize:(CGFloat)fontSize;
 /**
-    md5加密
+ md5加密
  */
 +(NSString *)md5:(NSString *)inputText;
 /**
-解析unicode字符串
+ 解析unicode字符串
  */
 + (NSString *)parseUnicode:(NSString *)unicodeStr;
 /**
@@ -50,7 +50,7 @@
 -(BOOL)isNumberLetterHanzi;
 
 /**
-  字母、数字、中文和空格 正则判断
+ 字母、数字、中文和空格 正则判断
  */
 -(BOOL)isNumberLetterHanziAndWhiteSpace;
 /**
@@ -82,7 +82,7 @@
 
 /**
  判断密码是否合法（6-16位字母和数字组合）
-
+ 
  @return 是否合法
  */
 - (BOOL)judgePassWordLegal;
@@ -101,15 +101,15 @@
  */
 - (BOOL)isOnlyWhitespaceAndNewlineCharacter;
 /**
-  生成32位随机字母数字组合的字符串
+ 生成随机字母数字组合的字符串，长度可选
  */
 +(NSString* )randomStringMixNumberWithlength:(NSInteger)length;
 /**
-    解析JSON字符串为NSDictionary字典对象
+ 解析JSON字符串为NSDictionary字典对象
  */
 -(NSDictionary *)parseJSONStringToNSDictionary;
 /**
-    移除字符串中的制表符，原字符串未改变
+ 移除字符串中的制表符，原字符串未改变
  */
 -(NSString *)removeUnescapedControlCharacter;
 /**
@@ -117,7 +117,7 @@
  */
 -(long long)fileSizeAtPath;
 /**
-    获取该文件路径下文件的mimeType
+ 获取该文件路径下文件的mimeType
  */
 -(NSString *)mimeTypeAtPath;
 /**
@@ -143,5 +143,6 @@
  计算文字长度。 汉字（汉字字符) : 2   英文数字（英文字符）: 1   emoji表情 : 4
  */
 - (int)LD_characterLength;
+- (NSString*)getSecretOfChinesePhoneNumber;
 @end
 

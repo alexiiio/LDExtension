@@ -9,6 +9,9 @@
 #import "LDDeviceModel.h"
 #import <sys/utsname.h>
 @implementation LDDeviceModel
+/*
+    https://www.theiphonewiki.com/wiki/Models
+ */
 + (NSString*)getDeviceModel
 {
     // 需要#import "sys/utsname.h"

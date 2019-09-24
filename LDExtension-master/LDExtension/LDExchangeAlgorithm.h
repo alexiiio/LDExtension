@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  一个字符串交换加密算法
 
- @param input 明文字符串
+ @param input 明文字符串，仅支持 英文字母（区分大小写）和数字
  @return 与明文等长的密文字符串
  */
 + (NSString *)encrypt:(NSString *)input;
