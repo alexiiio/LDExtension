@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "UIView+LDCategory.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIView *vv = [[UIView alloc]initWithFrame:CGRectMake(100, 200, 200, 100)];
+    [self.view addSubview:vv];
+    vv.backgroundColor = [UIColor blueColor];
+    [vv LD_addCornerRadius:50 andRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight];
 }
 
 

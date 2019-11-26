@@ -22,7 +22,13 @@
  添加边框
  */
 - (void)LD_addBorderWithBorderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth;
-
+/**
+ 添加圆角
+ 
+ @param radius 圆角半径，最大为宽或高的一半，再大没用
+ @param corners 圆角所在位置，可以设置多个值。如 UIRectCornerTopLeft | UIRectCornerTopRight 表示左上和右上同时设置圆角
+ */
+- (void)LD_addCornerRadius:(CGFloat)radius andRoundingCorners:(UIRectCorner)corners;
 @end
 
 /*****************************  frameAddition  ********************************/
