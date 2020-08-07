@@ -13,16 +13,16 @@
     if (aString==nil||aString.length==0) {
         return CGSizeZero;
     }
-    //    //  获取字符串的range
-    //    NSRange range=NSMakeRange(0, aString.length);
-    //    //  创建  NSMutableAttributeString
-    //    NSMutableAttributedString *attributeString=[[NSMutableAttributedString alloc]initWithString:aString];
-    //    //  为attributeString添加相关属性
-    //    [attributeString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:fontSize] range:range];
+//    //  获取字符串的range
+//    NSRange range=NSMakeRange(0, aString.length);
+//    //  创建  NSMutableAttributeString
+//    NSMutableAttributedString *attributeString=[[NSMutableAttributedString alloc]initWithString:aString];
+//    //  为attributeString添加相关属性
+//    [attributeString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:fontSize] range:range];
     //  计算字符串rect
     //  可选枚举的使用
     CGRect stringRect = [aString boundingRectWithSize:limitSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]} context:nil];
-    //    CGRect stringRect=[attributeString boundingRectWithSize:limitSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:NULL];
+//    CGRect stringRect=[attributeString boundingRectWithSize:limitSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:NULL];
     stringRect.size.height = ceil(CGRectGetHeight(stringRect));
     return stringRect.size;
 }
@@ -257,7 +257,7 @@
     NSFileManager* manager = [NSFileManager defaultManager];
     if ([manager fileExistsAtPath:self]){
         return [[manager attributesOfItemAtPath:self error:nil] fileSize];
-        //        return folderSize/(1024.0*1024.0);
+//        return folderSize/(1024.0*1024.0);
     }
     return 0;
 }
@@ -337,11 +337,18 @@
     }
     return strlength;
 }
-- (NSString*)getSecretOfChinesePhoneNumber {
-    if (self.length != 11) {
-        return self;
-    }
-    NSString *string=[self stringByReplacingOccurrencesOfString:[self substringWithRange:NSMakeRange(3, 4)]withString:@"****"];
-    return string;
+-(NSString *)clipWithMaxCharacterlength:(int)length {
+    NSString *tmp = self;
+      while ([tmp LD_characterLength] > length) {
+          tmp = [tmp substringToIndex:tmp.length - 1];
+      }
+    return tmp;
 }
+-(BOOL)isValidateMGEmail
+{
+    NSString *emailRegex = @"[A-Z0-9a-z-_]+@{1}[A-Za-z0-9-_]+\\.{1}[A-Za-z0-9-_]+";
+    NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
+    return [emailPredicate evaluateWithObject:self];
+}
+
 @end
