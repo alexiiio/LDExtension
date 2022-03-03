@@ -55,6 +55,14 @@
 
 
 /**
+ 沙盒路径
+ */
+
+#define DocumentPath        [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
+#define CachePath           [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
+/**
  字体
  */
 #define LDFont(x) [UIFont systemFontOfSize:x]
@@ -64,7 +72,7 @@
 /**
  判断空值
  */
-#define LD_iSNullString(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+#define LD_iSNullString(str) ([str isKindOfClass:[NSNull class]] || str == nil || ![str isKindOfClass:[NSString class]] || [str length] < 1 || [str isEqualToString:@"<null>"]  || [str isEqualToString:@"null"]? YES : NO )
 #define LD_iSNullArray(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0 ||[array isEqual:[NSNull null]])
 #define LD_iSNullDict(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0 || [dic isEqual:[NSNull null]])
 #define LD_iSNullObject(_object) (_object == nil \

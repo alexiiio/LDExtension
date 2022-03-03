@@ -17,6 +17,8 @@
  @return 生成的纯色图片
  */
 +(UIImage*)ld_imageWithColor:(UIColor*)color;
++(UIImage*)ld_imageWithColor:(UIColor*)color size:(CGSize)size;
+
 /**
  将图片剪裁至目标尺寸
  */
@@ -24,17 +26,40 @@
 /**
  改变图片的颜色，不保留灰度值
  */
-- (UIImage *) imageWithTintColor:(UIColor *)tintColor;
+- (UIImage *) ld_imageWithTintColor:(UIColor *)tintColor;
 /**
  改变图片的颜色，保留灰度值
  */
-- (UIImage *) imageWithGradientTintColor:(UIColor *)tintColor;
+- (UIImage *) ld_imageWithGradientTintColor:(UIColor *)tintColor;
 
 /**
 图片切圆角
  */
 - (UIImage *)imageWithCornerRadius:(CGFloat)cornerRadius;
 - (UIImage *)imageWithCornerRadius:(CGFloat)cornerRadius size:(CGSize)size;
+
+/**
+ *  图片增加水印
+ *
+ *  @param subImage   水印图片
+ *  @param posRect    水印的位置 和 水印的大小
+ *
+ *  @return 加水印后的新图片
+ */
+- (UIImage *)addSubImage:(UIImage *)subImage subImagePosition:(CGRect)posRect;
+
+
+/// 以原始大小添加图片到中心
+/// @param subImage 水印图片
+- (UIImage *)addSubImageToCenter:(UIImage *)subImage;
+
+//- (UIImage *)cropImageWithFrame:(CGRect)frame;
+
+
+/// 压缩图片到指定大小
+/// @param maxLength 最大图片大小
+- (UIImage *)compressImageToByte:(NSUInteger)maxLength;
+
 @end
 
 @interface UIImage (Blur)

@@ -45,14 +45,35 @@
     }] resume];
 }
 +(void)archiveObject:(id)object withFileName:(NSString *)fileName{
-    NSString *filePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/Documents/%@",fileName]];
-    BOOL sucess = [NSKeyedArchiver archiveRootObject:object toFile:filePath];
-    if (sucess) {
-        NSLog(@"保存%@成功",fileName);
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *folderPath = [DocumentPath stringByAppendingString:@"/archiveObj"];
+    NSString *filePath = [folderPath stringByAppendingString:[NSString stringWithFormat:@"/%@",fileName]];
+    
+    NSError *error;
+    // 添加文件夹
+    if (![fileManager fileExistsAtPath:folderPath]){
+        [fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:&error];
+    }
+    
+//    传nil表示删除文件
+    if (object) {
+        BOOL success = [NSKeyedArchiver archiveRootObject:object toFile:filePath];
+        if (success) {
+            NSLog(@"保存%@成功",fileName);
+        }
+    }else{
+        if ([fileManager fileExistsAtPath:filePath]) {
+            [fileManager removeItemAtPath:filePath error:&error];
+        }
+    }
+    if (error) {
+        NSLog(@"archiveObject:%@ error:%@",object,error);
     }
 }
 +(id)unArchiveObjectWithFileName:(NSString *)fileName{
-    NSString *filePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/Documents/%@",fileName]];
+    
+    NSString *filePath = [DocumentPath stringByAppendingString:[NSString stringWithFormat:@"/archiveObj/%@",fileName]];
     id object = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
     NSLog(@"unArchiveObject：%@",object);
     return object;

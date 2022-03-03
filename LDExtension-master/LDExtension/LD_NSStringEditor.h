@@ -17,6 +17,8 @@
  @return 返回字符串的实际大小
  */
 +(CGSize)sizeOfStringWithString:(NSString *)aString limitSize:(CGSize)limitSize fontSize:(CGFloat)fontSize;
++(CGSize)sizeOfStringWithString:(NSString *)aString limitSize:(CGSize)limitSize font:(UIFont *)font;
+
 /**
     md5加密
  */
@@ -129,6 +131,7 @@
  */
 -(NSString *)urlEncodeString;
 
+-(NSString *)urlStringByReplaceWhiteSpace;
 /**
  字符串拼接。
  只能传入对象类型 NSString和NSNumber类型，浮点型建议以字符串方式传入以控制位数
@@ -148,5 +151,6 @@
 /// @param length 限制最大字符长度
 - (NSString *)clipWithMaxCharacterlength:(int)length;
 -(BOOL)isValidateMGEmail;
+
 @end
 

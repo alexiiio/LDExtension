@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)md5:(NSString *)inputText;
 + (NSString*)sha1:(NSString *)inputText;
-+ (NSString *)sha256:(NSString *)inputText;
 +(NSString*)base64Encode:(NSString *)input;
 +(NSString*)base64Decode:(NSString *)input;
 

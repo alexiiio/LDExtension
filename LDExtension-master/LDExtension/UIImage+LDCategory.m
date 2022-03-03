@@ -13,7 +13,10 @@
 #define YY_SWAP(_a_, _b_)  do { __typeof__(_a_) _tmp_ = (_a_); (_a_) = (_b_); (_b_) = _tmp_; } while (0)
 @implementation UIImage (LDCategory)
 +(UIImage*)ld_imageWithColor:(UIColor*)color{
-    CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    return [self ld_imageWithColor:color size:CGSizeMake(1.0f, 1.0f)];
+}
++ (UIImage *)ld_imageWithColor:(UIColor *)color size:(CGSize)size {
+    CGRect rect=CGRectMake(0.0f, 0.0f, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, [color CGColor]);
@@ -22,7 +25,6 @@
     UIGraphicsEndImageContext();
     return theImage;
 }
-
 
 + (UIImage *) imageByScalingAndCroppingForSourceImage:(UIImage *)sourceImage targetSize:(CGSize)targetSize {
     UIImage *newImage = nil;
@@ -74,12 +76,12 @@
     return newImage;
 }
 
-- (UIImage *) imageWithTintColor:(UIColor *)tintColor
+- (UIImage *) ld_imageWithTintColor:(UIColor *)tintColor
 {
     return [self imageWithTintColor:tintColor blendMode:kCGBlendModeDestinationIn];
 }
 
-- (UIImage *) imageWithGradientTintColor:(UIColor *)tintColor
+- (UIImage *) ld_imageWithGradientTintColor:(UIColor *)tintColor
 {
     return [self imageWithTintColor:tintColor blendMode:kCGBlendModeOverlay];
 }
@@ -130,6 +132,80 @@
     UIGraphicsEndImageContext();
     return image;
 }
+
+
+- (UIImage *)addSubImage:(UIImage *)subImage subImagePosition:(CGRect)posRect{
+    
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
+    [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
+    [subImage drawInRect:posRect];
+    UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return resultingImage;
+}
+
+- (UIImage *)addSubImageToCenter:(UIImage *)subImage {
+    CGFloat width = self.size.width;
+    CGFloat height = self.size.height;
+    CGFloat subWidth = subImage.size.width;
+    CGFloat subHeight = subImage.size.height;
+    CGRect rect = CGRectMake((width-subWidth)/2, (height-subHeight)/2, subImage.size.width, subImage.size.height);
+    return [self addSubImage:subImage subImagePosition:rect];
+}
+
+
+//- (UIImage *)cropImageWithFrame:(CGRect)frame {
+//
+//    CGImageRef imageRef = CGImageCreateWithImageInRect(self.CGImage, frame);
+//    UIImage *image = [UIImage imageWithCGImage:imageRef];
+//    return image;
+//}
+
+
+- (UIImage *)compressImageToByte:(NSUInteger)maxLength {
+    // Compress by quality
+    CGFloat compression = 1;
+    NSData *data = UIImageJPEGRepresentation(self, compression);
+    NSLog(@"压缩前大小: %.1fM",data.length/1024.0f/1024.0f);
+    if (data.length < maxLength) return self;
+    
+    CGFloat max = 1;
+    CGFloat min = 0;
+    for (int i = 0; i < 6; ++i) {
+        compression = (max + min) / 2;
+        data = UIImageJPEGRepresentation(self, compression);
+        if (data.length < maxLength * 0.9) {
+            min = compression;
+        } else if (data.length > maxLength) {
+            max = compression;
+        } else {
+            break;
+        }
+    }
+    UIImage *resultImage = [UIImage imageWithData:data];
+    NSLog(@"第一轮压缩后大小: %.1fM",data.length/1024.0f/1024.0f);
+    if (data.length < maxLength) return resultImage;
+    
+    // Compress by size
+    NSUInteger lastDataLength = 0;
+    while (data.length > maxLength && data.length != lastDataLength) {
+        lastDataLength = data.length;
+        CGFloat ratio = (CGFloat)maxLength / data.length;
+        CGSize size = CGSizeMake((NSUInteger)(resultImage.size.width * sqrtf(ratio)),
+                                 (NSUInteger)(resultImage.size.height * sqrtf(ratio))); // Use NSUInteger to prevent white blank
+        UIGraphicsBeginImageContext(size);
+        [resultImage drawInRect:CGRectMake(0, 0, size.width, size.height)];
+        resultImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        data = UIImageJPEGRepresentation(resultImage, compression);
+    }
+    
+    NSLog(@"压缩后大小: %.1fM",data.length/1024.0f/1024.0f);
+    
+    return resultImage;
+}
+
+
 @end
 
 

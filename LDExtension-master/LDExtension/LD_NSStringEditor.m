@@ -27,6 +27,24 @@
     return stringRect.size;
 }
 
++ (CGSize)sizeOfStringWithString:(NSString *)aString limitSize:(CGSize)limitSize font:(UIFont *)font {
+    if (aString==nil||aString.length==0) {
+        return CGSizeZero;
+    }
+//    //  获取字符串的range
+//    NSRange range=NSMakeRange(0, aString.length);
+//    //  创建  NSMutableAttributeString
+//    NSMutableAttributedString *attributeString=[[NSMutableAttributedString alloc]initWithString:aString];
+//    //  为attributeString添加相关属性
+//    [attributeString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:fontSize] range:range];
+    //  计算字符串rect
+    //  可选枚举的使用
+    CGRect stringRect = [aString boundingRectWithSize:limitSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil];
+//    CGRect stringRect=[attributeString boundingRectWithSize:limitSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:NULL];
+    stringRect.size.height = ceil(CGRectGetHeight(stringRect));
+    return stringRect.size;
+
+}
 
 +(NSString *)md5:(NSString *)inputText
 {
@@ -297,6 +315,9 @@
 //                                                                                                                    CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
 //    return decodedString;
 }
+-(NSString *)urlStringByReplaceWhiteSpace {
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@" "].invertedSet];
+}
 +(NSString *)plusStrings:(id)firstArg, ...NS_REQUIRES_NIL_TERMINATION{
     NSString *tmp;
     if ([firstArg isKindOfClass:[NSString class]]) {
@@ -346,7 +367,7 @@
 }
 -(BOOL)isValidateMGEmail
 {
-    NSString *emailRegex = @"[A-Z0-9a-z-_]+@{1}[A-Za-z0-9-_]+\\.{1}[A-Za-z0-9-_]+";
+    NSString *emailRegex = @"\\w[-\\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\\.)+[A-Za-z]{2,14}";
     NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
     return [emailPredicate evaluateWithObject:self];
 }
