@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 	s.author = { 'AleXiiio' => '450145524@qq.com' }
 	s.source = { :git => "https://github.com/alexiiio/LDExtension.git", :tag => "v0.0.9"}
 	s.requires_arc = true
-	s.platform     = :ios, "7.0"
+	s.platform     = :ios, "9.0"
 	s.source_files = 'LDExtension-master/LDExtension/**/*.{h,m}'
 	s.frameworks = 'UIKit'
 	s.frameworks = 'CoreServices'
