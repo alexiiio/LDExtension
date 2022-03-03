@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02D7BE9827D06DD300A2C46F /* UIImage+compress.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D7BE9727D06DD300A2C46F /* UIImage+compress.m */; };
 		932723F622C4CB0700CEBAD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 932723F522C4CB0700CEBAD4 /* AppDelegate.m */; };
 		932723F922C4CB0700CEBAD4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932723F822C4CB0700CEBAD4 /* ViewController.m */; };
 		932723FC22C4CB0700CEBAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 932723FA22C4CB0700CEBAD4 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02D7BE9627D06DD300A2C46F /* UIImage+compress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+compress.h"; sourceTree = "<group>"; };
+		02D7BE9727D06DD300A2C46F /* UIImage+compress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+compress.m"; sourceTree = "<group>"; };
 		932723F122C4CB0700CEBAD4 /* LDExtension-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LDExtension-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		932723F422C4CB0700CEBAD4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		932723F522C4CB0700CEBAD4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02D7BE9527D06DBB00A2C46F /* UIImage+compress */ = {
+			isa = PBXGroup;
+			children = (
+				02D7BE9627D06DD300A2C46F /* UIImage+compress.h */,
+				02D7BE9727D06DD300A2C46F /* UIImage+compress.m */,
+			);
+			path = "UIImage+compress";
+			sourceTree = "<group>";
+		};
 		932723E822C4CB0700CEBAD4 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 				9327243F22C4CED800CEBAD4 /* LD_NSStringEditor.m */,
 				9327244222C4CED800CEBAD4 /* LDDeviceModel.h */,
 				9327244C22C4CED800CEBAD4 /* LDDeviceModel.m */,
+				02D7BE9527D06DBB00A2C46F /* UIImage+compress */,
 				9327244122C4CED800CEBAD4 /* LDEncrypt.h */,
 				9327244D22C4CED800CEBAD4 /* LDEncrypt.m */,
 				9327243A22C4CED800CEBAD4 /* LDExchangeAlgorithm.h */,
@@ -220,6 +233,7 @@
 				932723F922C4CB0700CEBAD4 /* ViewController.m in Sources */,
 				9327240422C4CB0800CEBAD4 /* main.m in Sources */,
 				9327245322C4CED800CEBAD4 /* LDExchangeAlgorithm.m in Sources */,
+				02D7BE9827D06DD300A2C46F /* UIImage+compress.m in Sources */,
 				9327245022C4CED800CEBAD4 /* NSObject+LDOptionalSingleton.m in Sources */,
 				932723F622C4CB0700CEBAD4 /* AppDelegate.m in Sources */,
 			);
